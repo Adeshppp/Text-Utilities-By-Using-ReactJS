@@ -41,16 +41,16 @@ export default function TextForm(props) {
 
 
       <div className="btn-group" role="group" aria-label="Basic example">
-        <button type="button" onClick={upperCase} className={`btn btn-outline-${props.mode==="dark"?"light":"dark"} mx-1`}>Convert to UPPER case</button>
-        <button type="button" onClick={lowerCase} className={`btn btn-outline-${props.mode==="dark"?"light":"dark"} mx-1`}>Convert to lower case</button>
-        <button type="button" onClick={clean} className={`btn btn-outline-${props.mode==="dark"?"light":"dark"} mx-1`}>Clear</button>
-        <button type="button" onClick={CopyText} className={`btn btn-outline-${props.mode==="dark"?"light":"dark"} mx-1`}>Copy Text</button>
-        <button type="button" onClick={SpaceRemove} className={`btn btn-outline-${props.mode==="dark"?"light":"dark"} mx-1`}>Remove extra spaces</button>
+        <button type="button" disabled={text.length<1} onClick={upperCase} className={`btn btn-outline-${props.mode==="dark"?"light":"dark"} mx-1`}>Convert to UPPER case</button>
+        <button type="button" disabled={text.length<1} onClick={lowerCase} className={`btn btn-outline-${props.mode==="dark"?"light":"dark"} mx-1`}>Convert to lower case</button>
+        <button type="button" disabled={text.length<1} onClick={clean} className={`btn btn-outline-${props.mode==="dark"?"light":"dark"} mx-1`}>Clear</button>
+        <button type="button" disabled={text1.length<1} onClick={CopyText} className={`btn btn-outline-${props.mode==="dark"?"light":"dark"} mx-1`}>Copy Text</button>
+        <button type="button" disabled={text.length<1} onClick={SpaceRemove} className={`btn btn-outline-${props.mode==="dark"?"light":"dark"} mx-1`}>Remove extra spaces</button>
     </div>
     <div className="container my-3"   style={{color: props.mode==="dark"?"white":"black"}}>
       <h2 >Your text Summary</h2>
-      <p>{text.length} characters and {text.split(" ").length-1} words</p>
-      <p>You will need {0.008*(text.split(" ").length-1)} minutes to read.</p>
+      <p>{text.length} characters and {text.split(/\s+/).length-1} words</p>
+      <p>You will need {0.008*(text.split(/\s+/).length-1)} minutes to read.</p>
       <h2>Preview</h2>
       <p>{text.length>0?text:"Enter Your Text above to preview."}</p>
     </div>

@@ -41,13 +41,16 @@ function App() {
 
   return (
     <>
-          {/* <Navbar title="Text Utils" about="About Text-Utils"/> */}
+    <BrowserRouter>
 
+<Navbar title="Text Utils" about="About Text-Utils" toggleMode={toggleMode}  mode={mode}/>
+<TextForm heading="Enter the Text below "  mode={mode}/>
+</BrowserRouter>
 
       {/* <Alert alert={Alert}/> */}
       {/* <About/> */}
       {/* <TextForm heading="Enter the Text below " mode={mode}/> */}
-      <BrowserRouter>
+      {/* <BrowserRouter>
       <Navbar title="Text Utils" about="About Text-Utils" toggleMode={toggleMode}  mode={mode}/>
 
       <Routes>
@@ -60,7 +63,7 @@ function App() {
             
       </Routes>
 
-      </BrowserRouter>
+      </BrowserRouter> */}
 
 
 
