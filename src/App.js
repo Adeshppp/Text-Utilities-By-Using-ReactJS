@@ -15,7 +15,7 @@ import {
 function App() {
   const[mode,setMode]=useState("dark");
   const [Alert, setAlert] = useState("null");
-  console.log(mode)
+  // console.log(mode)
   if(mode==="dark") document.body.style.backgroundColor="#042743";
   const toggleMode=()=>{
     if(mode==="light") {

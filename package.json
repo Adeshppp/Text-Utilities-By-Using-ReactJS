@@ -1,6 +1,5 @@
 {
-  "homepage": "https://adeshppp.github.io",
-  "name": "textutils",
+  "homepage": "https://Adeshppp.github.io/Text-Utilities-By-Using-ReactJS",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -14,9 +13,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+   "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

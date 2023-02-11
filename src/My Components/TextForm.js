@@ -11,7 +11,7 @@ export default function TextForm(props) {
     settext1("");
   }
   const handleOnChange=(event)=>{
-    console.log(event.target.value.charAt(text.length));
+    // console.log(event.target.value.charAt(text.length));
     settext(event.target.value);
   }
   const CopyText=()=>{
