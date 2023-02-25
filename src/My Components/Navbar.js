@@ -1,7 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 export default function Navbar(props) {
+  let location = useLocation();
+  React.useEffect(() => {  }, [location]);
   return (
 
     <>
@@ -14,10 +16,10 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
-              <Link className="nav-link" to="/home">Home</Link>
+              <Link className={`nav-link ${location.pathname==="/home"?"active":""}`} to="/home">Home</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/about">About</Link>
+              <Link className={`nav-link ${location.pathname==="/about"?"active":""}`} to="/about">About</Link>
             </li>
 
 
